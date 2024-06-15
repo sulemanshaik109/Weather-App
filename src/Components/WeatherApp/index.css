@@ -1,0 +1,41 @@
+.weather-app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-image: radial-gradient(#45278b, #2e335a);
+  padding: 50px;
+}
+
+.title {
+  color: #ebebf5;
+  font-size: 36px;
+}
+
+.welcome-text {
+  color: #ebebf5;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.welcome-description {
+  color: #ebebf5;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 60vh;
+}
+
+.weather-data-list {
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
