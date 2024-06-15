@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background-color: #ffe68c;
+  --text-color: #000;
+}
+
+.dark-mode {
+  --background-color: #041a34;
+  --text-color: #fff;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -9,4 +19,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }

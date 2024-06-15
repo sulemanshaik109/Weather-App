@@ -43,32 +43,32 @@ const WeatherDisplay = (props) => {
         <strong>Description: </strong>
         {weatherData.weather[0].description}
       </p>
-      <div className="additional-features">
-        <div className="info-container">
+      <ul className="additional-features">
+        <li className="info-container">
           <p className="detail-text">
             <strong>Humidity</strong>
           </p>
           <p className="detail-text">{weatherData.main.humidity}%</p>
-        </div>
-        <div className="info-container">
+        </li>
+        <li className="info-container">
           <p className="detail-text">
             <strong>Wind</strong>
           </p>
           <p className="detail-text">{weatherData.wind.speed} km/h</p>
-        </div>
-        <div className="info-container">
+        </li>
+        <li className="info-container">
           <p className="detail-text">
             <strong>Pressure</strong>
           </p>
           <p className="detail-text">{weatherData.main.pressure} mb</p>
-        </div>
-        <div className="info-container">
+        </li>
+        <li className="info-container">
           <p className="detail-text">
             <strong>Visibility</strong>
           </p>
           <p className="detail-text">{weatherData.visibility / 1000} km</p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 };

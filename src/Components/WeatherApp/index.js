@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { TailSpin } from "react-loader-spinner";
+import { MdDarkMode } from "react-icons/md";
+import { MdOutlineLightMode } from "react-icons/md";
 
 import SearchBar from "../SearchBar";
 import useWeather from "../../Hooks/useWeather";
@@ -10,6 +12,8 @@ const WeatherApp = () => {
   const [locations, setLocations] = useState(
     JSON.parse(localStorage.getItem("locations")) || []
   );
+  const [darkMode, setDarkMode] = useState(false);
+  console.log(darkMode);
   const { weatherData, loading, errors } = useWeather(locations);
 
   useEffect(() => {
@@ -30,10 +34,25 @@ const WeatherApp = () => {
     localStorage.setItem("locations", JSON.stringify(updatedLocations));
   };
 
+  const handleMode = () => {
+    setDarkMode(!darkMode);
+    console.log(document.documentElement);
+    document.documentElement.classList.toggle("dark-mode");
+  };
+
   return (
     <div className="weather-app-container">
-      <h1 className="title">Weather App</h1>
-      <SearchBar onSearch={addLocation} />
+      <h1 className="title">Weather</h1>
+      <div className="header">
+        <SearchBar onSearch={addLocation} />
+        <button type="button" className="mode-btn" onClick={handleMode}>
+          {darkMode ? (
+            <MdOutlineLightMode size="30" color="#ffffff" />
+          ) : (
+            <MdDarkMode size="30" />
+          )}
+        </button>
+      </div>
       <div className="weather-body-container">
         {locations.length === 0 ? (
           <div>

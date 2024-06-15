@@ -3,8 +3,9 @@
   flex-direction: column;
   padding: 10px 30px;
   width: 49%;
-  background-color: #1a1e3d;
+  background-color: #a3a24d;
   border-radius: 15px;
+  margin-bottom: 30px;
 }
 
 .weather-card-header {
@@ -14,7 +15,6 @@
 }
 
 .location-name {
-  color: #ebebf5;
   font-size: 26px;
   font-weight: 400;
   margin-top: 10px;
@@ -22,7 +22,6 @@
 }
 
 .temperature {
-  color: #ebebf5;
   font-size: 55px;
   font-weight: 400;
   margin-top: 10px;
@@ -36,7 +35,6 @@
 }
 
 .text {
-  color: #ebebf5;
   font-size: 16px;
   font-weight: 400;
   margin-top: 0px;
@@ -56,17 +54,15 @@
 }
 
 .condition {
-  color: #ebebf5;
   font-size: 35px;
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-right: 50px;
+  margin-right: 10px;
   line-height: 1;
 }
 
 .description {
-  color: #ebebf5;
   font-size: 20px;
   font-weight: 400;
   margin-top: 15px;
@@ -77,23 +73,47 @@
 .additional-features {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 20px;
+  list-style-type: none;
+  padding-left: 0px;
+  flex-wrap: wrap;
 }
 
 .info-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #848383;
+  border: 1px solid #160f0f;
   padding: 5px 15px;
   border-radius: 15px;
+  margin: 10px;
 }
 
 .detail-text {
-  color: #ebebf5;
   font-size: 16px;
   font-weight: 400;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .weather-card {
+    width: 100%;
+  }
+  .info-container {
+    margin: 4px;
+  }
+  .detail-text {
+    font-size: 14px;
+  }
+  .temperature {
+    font-size: 40px;
+  }
+  .condition {
+    font-size: 25px;
+  }
+  .date-and-time {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
