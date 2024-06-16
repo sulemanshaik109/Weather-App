@@ -2,8 +2,7 @@ import { TiDelete } from "react-icons/ti";
 import "./index.css";
 
 const WeatherDisplay = (props) => {
-  const { weatherData, weatherLocation, removeLocation } = props;
-  console.log(weatherData);
+  const { weatherData, weatherLocation, removeLocation, darkMode } = props;
 
   if (!weatherData) {
     return <p>Loading weather data for {weatherLocation}...</p>;
@@ -22,11 +21,11 @@ const WeatherDisplay = (props) => {
   };
 
   return (
-    <div className="weather-card">
+    <div className={`weather-card ${darkMode && "dark-weather-card"}`}>
       <div className="weather-card-header">
         <h2 className="location-name">{weatherData.name}</h2>
         <button className="weather-btn" type="button" onClick={deleteLocation}>
-          <TiDelete size="30" />
+          <TiDelete size="30" color={`${darkMode ? "#fff" : "#000"}`} />
         </button>
       </div>
       <div className="temperature-and-date-time">

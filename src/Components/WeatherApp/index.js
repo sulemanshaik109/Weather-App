@@ -13,7 +13,6 @@ const WeatherApp = () => {
     JSON.parse(localStorage.getItem("locations")) || []
   );
   const [darkMode, setDarkMode] = useState(false);
-  console.log(darkMode);
   const { weatherData, loading, errors } = useWeather(locations);
 
   useEffect(() => {
@@ -36,7 +35,6 @@ const WeatherApp = () => {
 
   const handleMode = () => {
     setDarkMode(!darkMode);
-    console.log(document.documentElement);
     document.documentElement.classList.toggle("dark-mode");
   };
 
@@ -44,7 +42,7 @@ const WeatherApp = () => {
     <div className="weather-app-container">
       <h1 className="title">Weather</h1>
       <div className="header">
-        <SearchBar onSearch={addLocation} />
+        <SearchBar onSearch={addLocation} darkMode={darkMode} />
         <button type="button" className="mode-btn" onClick={handleMode}>
           {darkMode ? (
             <MdOutlineLightMode size="30" color="#ffffff" />
@@ -82,6 +80,7 @@ const WeatherApp = () => {
                     weatherData={data}
                     weatherLocation={locations[index]}
                     removeLocation={removeLocation}
+                    darkMode={darkMode}
                   />
                 ))}
               </ul>

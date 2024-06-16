@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import "./index.css";
 
 const SearchBar = (props) => {
-  const { onSearch } = props;
+  const { onSearch, darkMode } = props;
   const [input, setInput] = useState("");
 
   const handleInputChange = (event) => {
@@ -34,7 +34,7 @@ const SearchBar = (props) => {
         className="search-input"
       />
       <button type="button" className="weather-btn" onClick={handleSearchClick}>
-        <FaSearch color="#EBEBF5" />
+        <FaSearch color={`${darkMode ? "#fff" : "#000"}`} />
       </button>
     </div>
   );

@@ -3,13 +3,13 @@
 }
 
 :root {
-  --background-color: #ffe68c;
+  --background-color: #ffffff;
   --text-color: #000;
 }
 
 .dark-mode {
-  --background-color: #041a34;
-  --text-color: #fff;
+  --background-color: #000000;
+  --text-color: #ffffff;
 }
 
 body {
