@@ -31,7 +31,7 @@ const SearchBar = (props) => {
         onChange={handleInputChange}
         onKeyPress={handleKeyPress}
         placeholder="Enter city name or zip code"
-        className="search-input"
+        className={`search-input ${darkMode && "dark-search-input"}`}
       />
       <button type="button" className="weather-btn" onClick={handleSearchClick}>
         <FaSearch color={`${darkMode ? "#fff" : "#000"}`} />
