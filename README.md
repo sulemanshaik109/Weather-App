@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+<h1 align="center">
+Weather App
+</h1>
+Welcome to Weather App, a React-based responsive web application that allows users to view the current weather conditions for multiple locations at the same time. Check the weather around you and all over the world at a glance. Rely on the accurate weather forecast and adjust your schedule to the weather coming in. You won’t even have to look out the window as the app will make you feel like you are already outside!Weather is sometimes difficult to predict. It uses the OpenWeather API to fetch real-time weather data. This accurate weather app allows to find out a detailed forecast wherever you are, for any time of the day by tapping on the icons:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Location
+- Current temperature
+- Date and time
+- Wind speed
+- Pressure
+- Humidity
+- Visibility
 
-## Available Scripts
 
-In the project directory, you can run:
+## Sample Images
 
-### `npm start`
+### Light Theme
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<div style="text-align: center;">
+     <img src="https://res.cloudinary.com/dsbxrn2tj/image/upload/v1718517633/Screenshot_99_nzbfmy.png" alt="light-theme">
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Dark Theme
 
-### `npm test`
+<div style="text-align: center;">
+     <img src="https://res.cloudinary.com/dsbxrn2tj/image/upload/v1718517768/Screenshot_100_xmezqm.png" alt="light-theme">
+</div>
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+- Clone the repo
+  ```
+  git clone https://github.com/sulemanshaik109/Weather-App.git
+  ```
+- Install Dependencies
+  ```
+  npm install
+  ```
+- Run the app
+  ```
+  npm start
+  ```
+- Navigate to `http://localhost:3000` to view the application in the browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **SearchBar**: Enter a location in the SearchBar and click search icon or press Enter to display the weather information of that loaction.
+- **Local Storage**: Local storage is used to store the added locations, even after closing or refreshing the browser the app will remember the data.
+- **Dark Mode Toggle**: Dark mode and light mode toggle functionality is implemented by clicking the icon.
+- **Delete Button**: When Delete Icon is clicked, that location will be removed from the local storage.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Usage
 
-### `npm run eject`
+To use the Weather App:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Enter the location in the search bar and click search icon or press Enter.
+- View the weather data displayed for each added location.
+- The app will remember your added locations even after closing or refreshing the browser thanks to local storage.
+- Use Theme Icons to toggle dark mode and light mode.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Technology Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+I have built this project using the following tools & techniques:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- React.JS
+- JSX
+- Functional Components
+- React Hooks
+- useState
+- useEffect
+- Search Bar
+- Local Storage
+- Reat Loader Spinner
+- React Icons
+- OpenWeather API
+- Github Actions.
 
-## Learn More
+### Resources
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<details>
+<summary>OpenWeather API</summary>
+<br/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+API Key: **099d738f470c32be8173e609ae9ed4ca**
 
-### Code Splitting
+**API Url**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+```
+</details>
 
-### Analyzing the Bundle Size
+<details>
+<summary>Colors</summary>
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<div style="background-color: #ffffff; width: 150px; padding: 10px; color: white">Hex: #ffffff</div>
+<div style="background-color: #000000; width: 150px; padding: 10px; color: white">Hex: #000000</div>
+<div style="background-color: #565656; width: 150px; padding: 10px; color: white">Hex: #565656</div>
+<div style="background-color: #bff0ea; width: 150px; padding: 10px; color: black">Hex: #bff0ea</div>
+<div style="background-color: #1b1a1a; width: 150px; padding: 10px; color: black">Hex: #1b1a1a</div>
+<div style="background-color: #3b3b3b; width: 150px; padding: 10px; color: black">Hex: #3b3b3b</div>
 
-### Making a Progressive Web App
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Show Your Support
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!
